@@ -1,0 +1,183 @@
+{
+  "test_queries": [
+    {
+      "id": 1,
+      "query": "How many days of PTO do employees get after 3 years?",
+      "expected_category": "HR",
+      "expected_intent": "benefits_pto",
+      "difficulty": "easy"
+    },
+    {
+      "id": 2,
+      "query": "What is the parental leave policy for adoptive parents?",
+      "expected_category": "HR",
+      "expected_intent": "benefits_parental_leave",
+      "difficulty": "medium"
+    },
+    {
+      "id": 3,
+      "query": "How do I authenticate API requests to TechCorp's API?",
+      "expected_category": "TECH",
+      "expected_intent": "api_authentication",
+      "difficulty": "easy"
+    },
+    {
+      "id": 4,
+      "query": "What are the rate limits for the API and how do I handle rate limit errors?",
+      "expected_category": "TECH",
+      "expected_intent": "api_rate_limits",
+      "difficulty": "medium"
+    },
+    {
+      "id": 5,
+      "query": "What is the maximum expense limit for business dinners with clients?",
+      "expected_category": "FINANCE",
+      "expected_intent": "expense_meals",
+      "difficulty": "easy"
+    },
+    {
+      "id": 6,
+      "query": "What approval is needed for a software purchase costing $75,000?",
+      "expected_category": "FINANCE",
+      "expected_intent": "procurement_approval",
+      "difficulty": "medium"
+    },
+    {
+      "id": 7,
+      "query": "Can I work remotely and what are the requirements?",
+      "expected_category": "HR",
+      "expected_intent": "workplace_remote_work",
+      "difficulty": "easy"
+    },
+    {
+      "id": 8,
+      "query": "How do I deploy a new version of the application to production using Kubernetes?",
+      "expected_category": "TECH",
+      "expected_intent": "deployment_kubernetes",
+      "difficulty": "hard"
+    },
+    {
+      "id": 9,
+      "query": "What security standards do we follow for password management?",
+      "expected_category": "TECH",
+      "expected_intent": "security_authentication",
+      "difficulty": "medium"
+    },
+    {
+      "id": 10,
+      "query": "What happens to my unused PTO when I leave the company?",
+      "expected_category": "HR",
+      "expected_intent": "benefits_pto_termination",
+      "difficulty": "medium"
+    },
+    {
+      "id": 11,
+      "query": "How do I submit an expense report for a business trip?",
+      "expected_category": "FINANCE",
+      "expected_intent": "expense_submission",
+      "difficulty": "easy"
+    },
+    {
+      "id": 12,
+      "query": "What are the webhook events available in the API?",
+      "expected_category": "TECH",
+      "expected_intent": "api_webhooks",
+      "difficulty": "medium"
+    },
+    {
+      "id": 13,
+      "query": "Is there a budget for professional development and certifications?",
+      "expected_category": "HR",
+      "expected_intent": "benefits_professional_development",
+      "difficulty": "easy"
+    },
+    {
+      "id": 14,
+      "query": "What is our incident response process for security breaches?",
+      "expected_category": "TECH",
+      "expected_intent": "security_incident_response",
+      "difficulty": "hard"
+    },
+    {
+      "id": 15,
+      "query": "Can I expense my home internet bill if I work remotely?",
+      "expected_category": "FINANCE",
+      "expected_intent": "expense_remote_work",
+      "difficulty": "medium"
+    },
+    {
+      "id": 16,
+      "query": "What are the bereavement leave policies?",
+      "expected_category": "HR",
+      "expected_intent": "leave_bereavement",
+      "difficulty": "easy"
+    },
+    {
+      "id": 17,
+      "query": "How do I handle database migrations during deployment?",
+      "expected_category": "TECH",
+      "expected_intent": "deployment_database_migrations",
+      "difficulty": "hard"
+    },
+    {
+      "id": 18,
+      "query": "What is the annual budget planning timeline?",
+      "expected_category": "FINANCE",
+      "expected_intent": "budget_planning_timeline",
+      "difficulty": "medium"
+    },
+    {
+      "id": 19,
+      "query": "Do we need security approval before purchasing new SaaS tools?",
+      "expected_category": "FINANCE",
+      "expected_intent": "procurement_saas",
+      "difficulty": "hard",
+      "note": "Could be routed to TECH for security or FINANCE for procurement - both acceptable"
+    },
+    {
+      "id": 20,
+      "query": "What should new employees know on their first day?",
+      "expected_category": "HR",
+      "expected_intent": "onboarding_first_day",
+      "difficulty": "easy"
+    }
+  ],
+  "edge_cases": [
+    {
+      "id": 21,
+      "query": "Hello, how are you?",
+      "expected_category": "GENERAL",
+      "expected_intent": "greeting",
+      "difficulty": "easy"
+    },
+    {
+      "id": 22,
+      "query": "What is the weather like today?",
+      "expected_category": "GENERAL",
+      "expected_intent": "out_of_scope",
+      "difficulty": "easy"
+    },
+    {
+      "id": 23,
+      "query": "asdfghjkl",
+      "expected_category": "GENERAL",
+      "expected_intent": "invalid_input",
+      "difficulty": "easy"
+    }
+  ],
+  "metadata": {
+    "total_queries": 23,
+    "categories": {
+      "HR": 7,
+      "TECH": 7,
+      "FINANCE": 6,
+      "GENERAL": 3
+    },
+    "difficulty_distribution": {
+      "easy": 11,
+      "medium": 8,
+      "hard": 4
+    },
+    "description": "Comprehensive test suite covering all agent types with varying difficulty levels and edge cases"
+  }
+}
